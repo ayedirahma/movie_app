@@ -1,0 +1,126 @@
+/* On garde le fond sombre de movie-detail */
+.wishlist-page {
+  min-height: calc(100vh - 110px);
+  padding: 18px 4%;
+  background: #050505;
+  color: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* En-tête de la page (Titre + Bouton retour) */
+.wishlist-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(191, 247, 107, 0.3);
+  padding-bottom: 16px;
+}
+
+.wishlist-header h1 {
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #464646;
+  color: rgb(191, 247, 107); /* Le vert de la head-bar */
+}
+
+/* Le bouton retour style movie-detail mais en vert */
+.back-button {
+  text-decoration: none;
+  padding: 9px 16px;
+  border: 1px solid rgb(191, 247, 107);
+  border-radius: 4px;
+  background: #050505;
+  color: rgb(191, 247, 107);
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.18s ease;
+}
+
+.back-button:hover {
+  background: rgb(191, 247, 107);
+  color: #111;
+  box-shadow: 0 0 12px rgba(191, 247, 107, 0.45);
+}
+
+/* Message quand la liste est vide */
+.empty-message {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+  color: #888;
+}
+
+/* La grille de films */
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* La carte d'un film (reprend le style des metadata-cards) */
+.wishlist-card {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  /* L'ombre lumineuse passe du jaune au vert clair */
+  box-shadow: 0 0 16px 3px rgba(191, 247, 107, 0.25); 
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 16px 3px rgba(191, 247, 107, 0.55);
+}
+
+.wishlist-movie {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.wishlist-movie img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-title {
+  color: rgb(191, 247, 107);
+  font-weight: bold;
+  padding: 12px;
+  text-align: center;
+  font-size: 15px;
+}
+
+/* Le bouton Remove style movie-detail */
+.remove-button {
+  margin: 0 12px 12px 12px;
+  padding: 9px 16px;
+  border: 1px solid rgb(191, 247, 107);
+  border-radius: 4px;
+  background: #050505;
+  color: rgb(191, 247, 107);
+  font: bold 13px Arial, sans-serif;
+  cursor: pointer;
+  transition:
+    background-color 0.18s ease,
+    color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+.remove-button:hover {
+  background: rgb(191, 247, 107);
+  color: #111;
+  box-shadow: 0 0 12px rgba(191, 247, 107, 0.45);
+}
+
+.remove-button:active {
+  transform: translateY(1px);
+}
